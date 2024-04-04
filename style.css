@@ -1,0 +1,404 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+   color: black;
+    padding: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    margin-left: 3em;
+}
+
+.logo a {
+  display: block; 
+}
+
+.logo img {
+  width: auto; 
+  height:70px; 
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1em;
+}
+
+nav ul li {
+    margin-right: 3em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  height:70vh;
+}
+
+.section_pic {
+  display: flex;
+  height: 300px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section_text {
+  align-self: center;
+  text-align: center;
+}
+
+.section_text p {
+  font-weight: 550;
+  }
+
+.text_p1 {
+  text-align: center;
+   overflow: hidden;
+   white-space: nowrap;
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret 5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.text_p2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+   white-space: nowrap;
+  animation: 
+    typing 2.1s steps(40, end),
+    blink-caret 5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  overflow: hidden;
+   white-space: nowrap;
+  animation: 
+    typing 2.1s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-about {
+    max-width: 800px; 
+    margin: 0 auto;
+    text-align: left; 
+     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color:  #f5f5f5;
+    padding: 30px;
+}
+
+.container-about h2 {
+    font-size: 1.5em; 
+    text-align: center;
+    color:#2e2e2e;
+}
+
+.container-about p {
+    line-height: 1.6; 
+     color: #555;
+}
+
+
+#roles {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.container.designer,
+.container.developer {
+    max-width: 400px; 
+    height: 300px;
+    margin: 0 20px; 
+    display: inline-block; 
+    vertical-align: top; 
+}
+
+.container h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color:#2e2e2e;
+}
+
+.container p {
+    font-size: 13px;
+    line-height: 1.6; 
+    color: #555;
+    margin: 0 20px;
+}
+
+.container h1 {
+    font-size: 20px;
+}
+
+/* designer container */
+.container.designer {
+    background-color: #ececec; /* Set a background color */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/*  developer container */
+.container.developer {
+    background-color: #e0ebeb; /* Set a different background color */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+
+.container.designer:hover,
+.container.developer:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container.designer img {
+    display: inline-block;
+    margin: 10px 5px; /* spacing around the image */
+    max-width:auto;
+    height: 50px;
+    border-radius: 10px; /* Adds a rounded corner effect */
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.container.developer img {
+    display: inline-block;
+    margin: 10px 5px; /* spacing around the image */
+    max-width:auto;
+    height: 50px;
+    border-radius: 10px; /* Adds a rounded corner effect */
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #333;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-container .btn {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+
+#socials-container {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.icon1 {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.btn-color-1 {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #3498db;
+}
+
+.btn-color-2 {
+  background-color: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}
+
+/* end PROFILE SECTION */
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project-box {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    background-color: #eee;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+    border-radius: 15px;
+}
+
+.project-box p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+.social-icons img[alt="figma"] {
+   width: 30px;
+}
+.social-icons a img[alt="fb"] {
+   width: 50px;
+}
+.social-icons a img[alt="git"] {
+   width: 50px;
+}
+
+.social-icons a img[alt="link"] {
+   width: 30px;
+}
+
+
+@media (max-width: 600px) {
+    .header {
+    display: flex;
+}
+#about {
+    display: flex;}
+}
+
+/* Default styles */
+
+/* Your existing CSS here */
+
+/* Media queries for phones */
+@media only screen and (max-width: 480px) {
+    /* Adjustments for phones */
+    .logo {
+        margin-left: 1em; /* Adjust margin for logo */
+    }
+    nav ul li {
+        margin-right: 1em; /* Adjust margin for nav links */
+    }
+    .section_pic {
+        height: 200px; /* Adjust height for section pictures */
+        width: 300px; /* Adjust width for section pictures */
+    }
+    .title {
+        font-size: 2rem; /* Adjust font-size for titles */
+    }
+    .container-about {
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Adjust padding for about section */
+
+    }
+    .container-about h2 {
+        font-size: 1.2em; /* Adjust font-size for about section headings */
+        text-align: center;
+    }
+    .container-about p {
+        font-size: 0.8em; /* Adjust font-size for about section paragraphs */
+        line-height: 1.2; /* Adjust line-height for about section paragraphs */
+        text-align: center;
+    }
+    .container.designer,
+    .container.developer {
+        max-width: 250px; /* Adjust max-width for designer and developer containers */
+        height: 400px; /* Adjust height for designer and developer containers */
+        align-items: column;
+    }
+    .container.designer img,
+    .container.developer img {
+        height: 30px; /* Adjust height for images in designer and developer containers */
+
+    }
+}

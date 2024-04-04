@@ -1,0 +1,204 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+     color: black;
+    padding: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff; 
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    margin-left: 3em;
+}
+
+.logo a {
+  display: block; /* Make the link a block-level element to cover the entire div */
+}
+
+.logo img {
+  width: 70px; /* Adjust the width of the logo as needed */
+  height:70px; /* Maintain the aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1em;
+}
+
+nav ul li {
+    margin-right: 3em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+/*CATEGORY*/
+.sub-categories a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+.sub-categories a:hover {
+  color: grey;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.sub-categories {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+.sub-categories nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1em;
+}
+
+.sub-categories nav ul li {
+    margin-right: 3em;
+}
+
+.sub-categories nav a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+/*ui projects*/
+.project-container-graph {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1rem;
+    align-items: center;
+    height: 100vh; 
+    margin-bottom:5em;
+}
+.project-box-graph {
+    display: inline-block;
+    position: relative; 
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
+    margin: 35px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-box-graph:hover {
+    transform: scale(1.05);
+}
+
+
+.project-image-g {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
+
+.project-title-g {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.project-box-graph:hover .project-title-g {
+    opacity: 1;
+}
+
+
+/* Styles for the modal popup */
+.modal 
+{
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+   
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+
+.prev,
+.next {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+
+
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="ui.css">
+   
+</head>
+<body>
+
+     <header>
+        <div class="logo"> 
+        <a href="index.html">
+            <img src="alogo3.png" alt="Logo Description">
+        </a>
+        
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sub-categories">
+        <nav>
+            <ul>
+                <li><a href="web.html">Front End</a></li>
+                <li><a href="graphics.html ">Graphics Design</a></li>
+                <li><a href="ui.html">UI Design </a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+<div class="project-container-graph">
+   
+    <div class="project-box-graph" onclick="openModal(['uiprojects/pop1.png', 'uiprojects/ElevateFitness Studio Landing page.png'])">   
+        <img class="project-image-g" src="uiprojects/final.png" alt="Project 1">
+        <div class="project-title-g">ElevateFitness Studio Landing Page</div>
+    
+    </div>
+
+     <div class="project-box-graph" onclick="openModal(['uiprojects/bhome.png', 'uiprojects/bmenu.png', 'uiprojects/bcontact.png', 'uiprojects/babout.png' ])">   
+        <img class="project-image-g" src="uiprojects/bliss cafe final.png" alt="Project 2">
+        <div class="project-title-g">Bean Bliss Cafe Prototype</div>
+    
+    </div>
+
+    <div class="project-box-graph" onclick="openModal(['uiprojects/pop2.png'])">   
+        <img class="project-image-g" src="uiprojects/classic final.png" alt="Project 3">
+        <div class="project-title-g">Classic Shears Studio Landing Page</div>
+    
+    </div>
+
+    <div class="project-box-graph" onclick="openModal(['uiprojects/pop3.png'])">   
+        <img class="project-image-g" src="uiprojects/wash final.png" alt="Project 4">
+        <div class="project-title-g">Turboglow Wash Landing Page</div>
+    
+    </div>
+
+    <div class="project-box-graph" onclick="openModal(['uiprojects/pop4.png'])">   
+        <img class="project-image-g" src="uiprojects/hub final.png" alt="Project 5">
+        <div class="project-title-g">AmbrosiaHub Restaurant Landing Page</div>
+    
+    </div>
+
+    
+
+
+
+</div>
+  
+
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <span class="prev" onclick="showPrevImage()">&#10094;</span>
+        <span class="next" onclick="showNextImage()">&#10095;</span>
+</div>
+
+
+
+<script>
+ var currentImageIndex = 0;
+var images = [];
+
+function openModal(imagePaths) {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('modalImage');
+
+   
+    images = imagePaths;
+
+  
+    modalImg.src = images[currentImageIndex];
+    modal.style.display = 'block';
+
+    
+    updateButtonVisibility();
+
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+
+   
+    document.onkeydown = function(event) {
+        if (event.keyCode == 37) {
+            // Left arrow key
+            showPrevImage();
+        } else if (event.keyCode == 39) {
+            // Right arrow key
+            showNextImage();
+        }
+    };
+}
+
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+
+    
+    document.onkeydown = null;
+}
+
+function showPrevImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateModalImage();
+        updateButtonVisibility();
+    }
+}
+
+function showNextImage() {
+    if (currentImageIndex < images.length - 1) {
+        currentImageIndex++;
+        updateModalImage();
+        updateButtonVisibility();
+    }
+}
+
+function updateModalImage() {
+    var modalImg = document.getElementById('modalImage');
+    modalImg.src = images[currentImageIndex];
+}
+
+function updateButtonVisibility() {
+    var prevBtn = document.querySelector('.prev');
+    var nextBtn = document.querySelector('.next');
+
+    
+    if (images.length <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+    } else {
+        prevBtn.style.display = currentImageIndex === 0 ? 'none' : 'block';
+        nextBtn.style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
+    }
+}
+
+
+
+</script>
+ 
+</body>
+</html>
